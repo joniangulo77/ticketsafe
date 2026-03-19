@@ -350,12 +350,12 @@
           <div class="photo-ico-wrap">📷</div>
           <div class="photo-hint"><strong>Elige una opcion</strong></div>
           <div style="display:flex;gap:10px;margin-top:12px;justify-content:center">
-            <label for="photo-cam" style="flex:1;max-width:140px;background:rgba(200,137,26,.2);border:1px solid rgba(200,137,26,.5);border-radius:10px;padding:10px;color:#f5c842;font-size:13px;cursor:pointer;text-align:center;display:block">📷 Camara</label>
-            <label for="photo-gal" style="flex:1;max-width:140px;background:rgba(200,137,26,.08);border:1px solid rgba(200,137,26,.2);border-radius:10px;padding:10px;color:#f5c842;font-size:13px;cursor:pointer;text-align:center;display:block">🖼 Galeria</label>
+            <button type="button" onclick="document.getElementById('inp-cam').click()" style="flex:1;max-width:140px;background:rgba(200,137,26,.2);border:1px solid rgba(200,137,26,.5);border-radius:10px;padding:10px;color:#f5c842;font-size:13px;cursor:pointer">📷 Camara</button>
+            <button type="button" onclick="document.getElementById('inp-gal').click()" style="flex:1;max-width:140px;background:rgba(200,137,26,.08);border:1px solid rgba(200,137,26,.2);border-radius:10px;padding:10px;color:#f5c842;font-size:13px;cursor:pointer">🖼 Galeria</button>
           </div>
-          <input type="file" accept="image/*" capture="environment" id="photo-cam" onchange="handlePhoto(event)" style="display:none"/>
-          <input type="file" accept="image/*" id="photo-gal" onchange="handlePhoto(event)" style="display:none"/>
         </div>
+        <input type="file" accept="image/*" capture="environment" id="inp-cam" onchange="handlePhoto(event)"/>
+        <input type="file" accept="image/*" id="inp-gal" onchange="handlePhoto(event)"/>
         <div style="position:relative">
         <div class="ai-scanning" id="ai-scanning">
           <div class="ai-spinner"></div>
