@@ -727,7 +727,12 @@ function rmPhoto(){
   photo=null;
   document.getElementById('photo-area').style.display='block';
   document.getElementById('photo-prev').style.display='none';
-  document.getElementById('photo-input').value='';
+  var pi=document.getElementById('photo-input');
+  if(pi) pi.value='';
+  var pc=document.getElementById('photo-cam');
+  if(pc) pc.value='';
+  var pg=document.getElementById('photo-gal');
+  if(pg) pg.value='';
   document.getElementById('ai-banner').classList.remove('show');
 }
 
@@ -1000,7 +1005,13 @@ function clearForm(){
   selCat='';
   var els=document.getElementById('cat-grid').getElementsByTagName('div');
   for(var i=0;i<els.length;i++) els[i].classList.remove('sel');
-  rmPhoto();
+  photo=null;
+  var pa=document.getElementById('photo-area');
+  var pp=document.getElementById('photo-prev');
+  var ab=document.getElementById('ai-banner');
+  if(pa) pa.style.display='block';
+  if(pp) pp.style.display='none';
+  if(ab) ab.classList.remove('show');
 }
 
 function showToast(msg){
